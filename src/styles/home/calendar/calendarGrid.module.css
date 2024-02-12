@@ -1,0 +1,53 @@
+.calendarGrid {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0.5rem;
+  min-width: 0px;
+  min-height: 0px;
+}
+
+.dayName {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.dayName:nth-child(7n),
+.dayName:nth-child(7n-1) {
+  color: var(--dark-red);
+}
+
+.dayCardsContainer,
+.dayNamesContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.dayCardsContainer {
+  height: 100%;
+  flex-grow: 1;
+}
+
+.dayCardsContainer > *,
+.calendarGrid > * {
+  min-width: 0px;
+  min-height: 0px;
+}
+
+@media (max-width: 1000px) {
+  .dayCardsContainer,
+  .dayNamesContainer {
+    gap: 1px;
+  }
+
+  .dayName {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .dayName {
+    font-size: 1.1rem;
+  }
+}

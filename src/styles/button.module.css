@@ -1,0 +1,237 @@
+.button {
+  font-size: 1.8rem;
+  padding: 1rem 1.5rem;
+  font-family: inherit;
+  border-radius: 50px;
+  border: 1.5px solid var(--black);
+  cursor: pointer;
+  background-color: var(--white);
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
+}
+
+.button:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+/* Override styles */
+.button.closeButton,
+.button.smallCloseButton {
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  right: 2px;
+  top: 0;
+}
+
+.button.closeButton:hover,
+.button.smallCloseButton:hover {
+  background-color: transparent;
+  color: var(--dark-red);
+}
+
+.button.smallCloseButton {
+  font-size: 1.5rem;
+  right: 0;
+}
+
+.button.shareButton,
+.button.saveButton,
+.button.cancelButton {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.button.cancelButton:hover {
+  background-color: var(--dark-red);
+}
+
+.button.okButton {
+  margin-top: 2rem;
+  font-size: 1.7rem;
+  padding: 0.7rem 2rem;
+}
+
+.button.slidePanelButton {
+  font-size: 1.3rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--light-blue);
+}
+
+.button.slidePanelButton:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.button.slidePanelButton:disabled {
+  color: var(--grey);
+  border-color: var(--grey);
+  cursor: not-allowed;
+}
+
+.button.slidePanelButton:disabled:hover {
+  background-color: var(--light-blue);
+}
+
+.button.extensionsSlidePanelButton {
+  font-size: 1.5rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--light-blue);
+}
+
+.button.extensionsSlidePanelButton:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.button.extensionsSlidePanelButton:disabled {
+  color: var(--grey);
+  border-color: var(--grey);
+  cursor: not-allowed;
+}
+
+.button.extensionsSlidePanelButton:disabled:hover {
+  background-color: var(--light-blue);
+}
+
+.button.pomodoroSlidePanelButton {
+  background-color: var(--light-blue);
+}
+
+.button.pomodoroSlidePanelButton:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.button.meetingAssistant {
+  background-color: var(--light-blue);
+}
+
+.button.meetingAssistant:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.button.registerButton {
+  margin-top: 3.5rem;
+}
+
+.button.addEventButton {
+  position: absolute;
+  right: -3rem;
+  transform: translateX(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--secondary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.button.addEventButton:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+@media (max-width: 1000px) {
+  .button.okButton {
+    font-size: 1.5rem;
+  }
+
+  .button.nextPreviousMonthButton {
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .button.addEventButton {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .button.smallCloseButton {
+    font-size: 1.3rem;
+  }
+
+  .button.slidePanelButton {
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .button.shareButton,
+  .button.saveButton,
+  .button.cancelButton {
+    font-size: 1.3rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .button.closeButton {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .button.addEventButton {
+    right: -1.5rem;
+    gap: 0.5rem;
+  }
+
+  .button.smallCloseButton {
+    font-size: 1.1rem;
+    right: -8px;
+    top: -5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .button.addEventButton {
+    padding: 0.5rem;
+    right: -3.5rem;
+  }
+
+  .button.smallCloseButton {
+    font-size: 0.9rem;
+    right: -9px;
+    top: -7px;
+  }
+
+  .button.okButton {
+    font-size: 1.2rem;
+  }
+
+  .button.error {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .button.extensionsSlidePanelButton {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .button.registerButton {
+    font-size: 1.5rem;
+  }
+
+  .button.addEventButton {
+    right: -1.5rem;
+  }
+
+  .button.smallCloseButton {
+    right: -12px;
+    top: -8px;
+  }
+
+  .button.error {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .button.addEventButton {
+    right: -0.9rem;
+  }
+}

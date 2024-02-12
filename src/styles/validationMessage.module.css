@@ -1,0 +1,27 @@
+.validationContainer {
+  background-color: var(--red);
+  border: 0.15rem solid var(--dark-red);
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  width: 100%;
+}
+
+.validationText {
+  text-justify: center;
+  font-size: 1.8rem;
+}
+
+/* Override styles */
+.validationText.eventModal {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .validationText.eventModal {
+    font-size: 1.3rem;
+  }
+
+  .validationContainer.eventModal {
+    padding: 0.4rem 0.7rem;
+  }
+}

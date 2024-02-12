@@ -1,0 +1,73 @@
+.calendarInvitationCard {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.calendarIcon {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+
+.calendarName {
+  font-size: 1.1rem;
+  text-wrap: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.name,
+.email {
+  font-size: 1rem;
+  color: var(--grey);
+  text-wrap: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.iconContainer {
+  grid-column: 3/4;
+  grid-row: 1/4;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.acceptIcon,
+.rejectIcon {
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+  transition-property: fill, stroke;
+  transition-duration: 0.25s;
+}
+
+.acceptIcon:hover {
+  stroke: var(--secondary);
+}
+
+.rejectIcon:hover {
+  stroke: var(--dark-red);
+}
+
+@media (max-width: 1000px) {
+  .calendarIcon {
+    height: 28px;
+    width: 28px;
+  }
+
+  .acceptIcon,
+  .rejectIcon {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .calendarIcon {
+    height: 24px;
+    width: 24px;
+  }
+}

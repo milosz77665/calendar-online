@@ -1,0 +1,24 @@
+.modalBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.279);
+  display: flex;
+  min-height: 450px;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s;
+  z-index: 99;
+}
+
+/* Override styles */
+.modalBackground.errorAlertModalBackground {
+  z-index: 9999;
+}
+
+.modalBackground.confirmModal,
+.modalBackground.shareToUserModal {
+  z-index: 1000;
+}

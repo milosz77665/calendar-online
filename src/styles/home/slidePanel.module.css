@@ -1,0 +1,144 @@
+.slidePanel {
+  position: fixed;
+  background-color: var(--light-blue);
+  padding: 2rem;
+  width: fit-content;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  z-index: 110;
+  right: -100%;
+  overflow: hidden;
+  max-width: 28rem;
+}
+
+.slidePanelHidden {
+  animation: slideOut 0.3s forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.slidePanelOpen {
+  animation: slideIn 0.3s 0.3s forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.rightArrowIcon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transform: translate(-50%, -50%);
+  transition: stroke 0.25s;
+  cursor: pointer;
+}
+
+.rightArrowIcon:hover {
+  stroke: var(--dark-red);
+}
+
+@keyframes slideOut {
+  from {
+    right: 54px;
+    overflow-y: auto;
+  }
+  to {
+    right: -100%;
+    display: none;
+    overflow: hidden;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    right: -100%;
+    display: none;
+    overflow: hidden;
+  }
+  to {
+    right: 54px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .slidePanel {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    max-width: 20rem;
+  }
+
+  @keyframes slideOut {
+    from {
+      right: 37px;
+      overflow-y: auto;
+    }
+    to {
+      right: -100%;
+      display: none;
+      overflow: hidden;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      right: -100%;
+      display: none;
+      overflow: hidden;
+    }
+    to {
+      right: 37px;
+      overflow-y: auto;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .slidePanel {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 18rem;
+  }
+
+  @keyframes slideOut {
+    from {
+      right: 32px;
+      overflow-y: auto;
+    }
+    to {
+      right: -100%;
+      display: none;
+      overflow: hidden;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      right: -100%;
+      display: none;
+      overflow: hidden;
+    }
+    to {
+      right: 32px;
+      overflow-y: auto;
+    }
+  }
+}
+
+/* Override styles */
+.slidePanel.extensionSlidePanel {
+  width: 50rem;
+  max-width: none;
+  padding: 1rem;
+}
+
+@media (max-width: 700px) {
+  .slidePanel.extensionSlidePanel {
+    width: calc(100% - 32px);
+  }
+}

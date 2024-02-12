@@ -1,0 +1,172 @@
+.notesContainer,
+.toDoListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+.addNewNoteTitleContainer,
+.addNewToDoListTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.noteTitleInput,
+.toDoListTitleInput {
+  font-family: inherit;
+  font-size: 1.5rem;
+  background-color: var(--light-blue);
+  outline: none;
+  border: 0.15rem solid var(--grey);
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+}
+
+.noteCard,
+.toDoListCard {
+  padding: 1.2rem;
+  border: solid 1.5px var(--black);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: fit-content;
+  width: 100%;
+  transition-property: border-color, color;
+  transition-duration: 0.25s;
+}
+
+.noteCard:hover,
+.toDoListCard:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.noteCard:hover .trashIcon,
+.toDoListCard:hover .trashIcon {
+  stroke: var(--secondary);
+}
+
+.noteCardOpen:hover,
+.toDoListCardOpen:hover {
+  cursor: auto;
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.noteCardOpen:hover .trashIcon,
+.toDoListCardOpen:hover .trashIcon {
+  stroke: var(--black);
+}
+
+.noteCardOpen,
+.toDoListCardOpen {
+  width: 100%;
+  height: 100%;
+  border: none;
+  min-height: 0;
+  min-width: 0;
+}
+
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid var(--grey);
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+  min-height: 0;
+  min-width: 0;
+}
+
+.noteUpperSectionContainer,
+.toDoListUpperSectionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.noteTitle,
+.toDoListTitle {
+  font-size: 1.8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.trashIcon {
+  cursor: pointer;
+  transition-property: fill, stroke;
+  transition-duration: 0.25s;
+}
+
+.noteCard:hover .trashIcon:hover,
+.toDoListCard:hover .trashIcon:hover {
+  stroke: var(--dark-red);
+}
+
+.noteContent,
+.toDoListContent {
+  font-size: 1.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.textarea {
+  font-size: 1.4rem;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  line-height: 2rem;
+  background-color: var(--light-blue);
+  border: 0.5px solid var(--grey);
+  padding: 0.5rem;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+
+.titleInput {
+  font-family: inherit;
+  background-color: var(--light-blue);
+  outline: none;
+  border: none;
+  font-size: 1.8rem;
+  max-width: 30rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.documentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  min-height: 0;
+  min-width: 0;
+}
+
+@media (max-width: 400px) {
+  .noteTitleInput,
+  .toDoListTitleInput {
+    font-size: 1.3rem;
+  }
+}

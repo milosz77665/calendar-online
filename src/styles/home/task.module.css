@@ -1,0 +1,19 @@
+.taskContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.input {
+  font-family: inherit;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+}
+
+.inputIsDone {
+  color: var(--grey);
+  text-decoration: line-through;
+}

@@ -1,0 +1,140 @@
+.modalContainer {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 1.5rem;
+  border: 0.15rem solid var(--black);
+}
+
+/* Override styles */
+.modalContainer.errorModal,
+.modalContainer.confirmModal {
+  padding-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 100;
+}
+
+.modalContainer.extensionModal {
+  padding: 2rem 2rem;
+  z-index: 120;
+}
+
+.modalContainer.shareToUserModal {
+  min-width: 30rem;
+  padding: 3.5rem;
+}
+
+.modalContainer.eventModal {
+  padding: 2rem 3rem;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 15px 50px -10px var(--black);
+  -moz-box-shadow: 0px 15px 50px -10px var(--black);
+  box-shadow: 0px 15px 50px -10px var(--black);
+  width: 45rem;
+}
+
+.modalContainer.loginModal {
+  padding: 4rem !important;
+  width: 45rem;
+  transform: scale(1);
+  transition: transform 0.2s 0.2s;
+  z-index: 2;
+  -webkit-box-shadow: 0px 0px 23px 3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 23px 3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 23px 3px rgba(0, 0, 0, 1);
+  perspective: 10000px;
+}
+
+.modalContainer.hideLoginModal {
+  transform: scale(0.001) rotate3d(0, 0, 0, 180deg);
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+@media (max-width: 1000px) {
+  .modalContainer.extensionModal {
+    padding: 1.5rem 3rem;
+  }
+
+  .modalContainer.eventModal {
+    padding: 1.3rem 2.5rem;
+    width: 35rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .modalContainer.errorModal,
+  .modalContainer.confirmModal {
+    padding-top: 2.5rem;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+  }
+
+  .modalContainer.eventModal {
+    padding: 1rem 2rem;
+    width: 30rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .modalContainer.loginModal {
+    padding: 3rem;
+    width: 40rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .modalContainer.loginModal {
+    padding: 2.5rem;
+    width: 90vw;
+  }
+
+  .modalContainer.shareToUserModal {
+    min-width: 25rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .modalContainer.errorModal,
+  .modalContainer.confirmModal {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .modalContainer.extensionModal {
+    transform: translateX(-16px);
+  }
+
+  .modalContainer.eventModal {
+    padding: 1rem;
+    width: 28rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .modalContainer.extensionModal {
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .modalContainer.eventModal {
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    width: 26rem;
+  }
+
+  .modalContainer.shareToUserModal {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

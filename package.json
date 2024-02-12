@@ -1,0 +1,32 @@
+{
+  "name": "calendar",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "cal-parser": "^1.0.2",
+    "cookies-next": "^2.1.2",
+    "encoding": "^0.1.13",
+    "firebase": "^9.22.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
+    "next": "^14.0.3",
+    "nextjs-toploader": "^1.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rrule": "^2.7.2",
+    "web-push": "^3.6.6"
+  },
+  "devDependencies": {
+    "cypress": "^12.17.2",
+    "eslint": "8.41.0",
+    "eslint-config-next": "^14.0.3",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "2.8.8"
+  }
+}

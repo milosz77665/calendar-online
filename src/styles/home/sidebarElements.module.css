@@ -1,0 +1,43 @@
+.iconButton {
+  cursor: pointer;
+  transition: stroke 0.25s;
+}
+
+.iconButton:hover {
+  stroke: var(--accent);
+}
+
+.iconButtonCalendar:hover {
+  stroke: var(--secondary);
+}
+
+.extensionList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .iconButton {
+    height: 27px;
+    width: 27px;
+  }
+
+  .extensionList {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .iconButton {
+    height: 24px;
+    width: 24px;
+  }
+
+  .extensionList {
+    margin-bottom: 1.5rem;
+  }
+}

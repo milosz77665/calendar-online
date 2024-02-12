@@ -1,0 +1,48 @@
+.fileChooserContainer {
+  height: 10rem;
+  width: 15rem;
+  border-radius: 25px;
+  border: 1.5px dashed var(--secondary);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectedFile {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 2rem 0rem;
+  max-width: 13rem;
+  line-height: 1.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text {
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.fileChooser {
+  display: none;
+}
+
+/* Override styles */
+@media (max-width: 1000px) {
+  .fileChooserContainer.slidePanel {
+    height: 9rem;
+    width: 13rem;
+  }
+
+  .selectedFile.slidePanel {
+    font-size: 1.1rem;
+    max-width: 11.5rem;
+  }
+
+  .text.slidePanel {
+    font-size: 1.1rem;
+  }
+}

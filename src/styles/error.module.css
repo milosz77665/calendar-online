@@ -1,0 +1,28 @@
+.errorContainer {
+  font-size: 3rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .errorContainer {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .errorContainer {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .errorContainer {
+    font-size: 1.45rem;
+  }
+}

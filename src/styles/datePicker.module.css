@@ -1,0 +1,101 @@
+.datePicker:-webkit-autofill,
+.datePicker:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px var(--white) inset;
+  border: var(--black) solid 0.15rem;
+}
+
+.datePicker {
+  font-family: inherit;
+  font-size: 1.8rem;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  border: 0.15rem solid var(--grey);
+  width: 100%;
+  background-color: var(--white);
+  outline: none;
+  color: transparent;
+}
+
+.hideCalendar::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.datePicker::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+.label {
+  color: var(--grey);
+  pointer-events: none;
+  font-size: 1.8rem;
+  padding: 0 2px;
+  position: absolute;
+  transform: translate(1rem, 0.75rem);
+  transition-property: transform, font-size;
+  transition-duration: 0.3s;
+}
+
+.datePicker:focus ~ .label,
+.datePicker:-webkit-autofill ~ .label,
+.datePickerFilled ~ .label {
+  transform: translate(1rem, -1rem);
+  background-color: var(--white);
+  font-size: 1.3rem;
+  color: var(--black);
+}
+
+.datePickerFilled {
+  color: var(--black);
+}
+
+.datePicker:focus {
+  border: var(--secondary) solid 0.15rem;
+  box-shadow: 0px 0px 6px 0px var(--secondary);
+  color: var(--black);
+}
+
+.datePicker:hover {
+  border: var(--secondary) solid 0.15rem;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Override styles */
+.label.meetingAssistant {
+  font-size: 1.5rem;
+  background-color: var(--light-blue);
+}
+
+.datePicker.meetingAssistant {
+  font-size: 1.5rem;
+  background-color: var(--light-blue);
+}
+
+.datePicker.meetingAssistant:focus ~ .label.meetingAssistant,
+.datePicker.meetingAssistant:-webkit-autofill ~ .label.meetingAssistant,
+.datePickerFilled.meetingAssistant ~ .label {
+  background-color: var(--light-blue);
+}
+
+@media (max-width: 1000px) {
+  .datePicker.eventModal {
+    font-size: 1.3rem;
+    padding: 0.6rem 0.7rem;
+  }
+
+  .label.eventModal {
+    font-size: 1.3rem;
+    transform: translate(1rem, 0.9rem);
+  }
+
+  .datePicker.eventModal:focus ~ .label.eventModal,
+  .datePicker.eventModal:-webkit-autofill ~ .label.eventModal,
+  .datePickerFilled.eventModal ~ .label {
+    font-size: 1rem;
+    transform: translate(0.7rem, -0.7rem);
+  }
+}

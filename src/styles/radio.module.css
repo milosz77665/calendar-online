@@ -1,0 +1,27 @@
+.radioContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.radio {
+  cursor: pointer;
+  appearance: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 100%;
+  border: 1.5px solid var(--grey);
+  transition: 0.2s all linear;
+  position: relative;
+}
+
+.radio:checked {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.label {
+  cursor: pointer;
+  font-size: 1.3rem;
+}

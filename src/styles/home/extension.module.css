@@ -1,0 +1,62 @@
+.extensionNotAdded > svg,
+.extensionAdded > svg {
+  cursor: pointer;
+  stroke: var(--black);
+  border-radius: 5px;
+  padding: 2px;
+  height: 38px;
+  width: 38px;
+}
+
+.extensionNotAdded > svg {
+  outline: solid 2px transparent;
+}
+
+.extensionToAdd > svg,
+.extensionToDelete > svg {
+  cursor: pointer;
+  stroke: var(--black);
+  border-radius: 5px;
+  padding: 2px;
+  height: 38px;
+  width: 38px;
+}
+
+.extensionToAdd > svg {
+  outline: solid 2px var(--secondary);
+}
+
+.extensionAdded > svg {
+  outline: solid 2px var(--green);
+}
+
+.extensionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.text {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .extensionToAdd > svg,
+  .extensionToDelete > svg,
+  .extensionNotAdded > svg,
+  .extensionAdded > svg {
+    height: 30px;
+    width: 30px;
+  }
+
+  /* .extensionNotAdded > svg,
+  .extensionToAdd > svg,
+  .extensionAdded > svg {
+    outline-width: 1.5px;
+  } */
+  .text {
+    font-size: 1.3rem;
+  }
+}

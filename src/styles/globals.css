@@ -1,0 +1,44 @@
+:root {
+  --primary: #283b66;
+  --secondary: #6593ff;
+  --accent: #34d1bf;
+  --green: #0fbd6c;
+  --white: #fcf7f8;
+  --black: #1c1c1c;
+  --red: #ffaaaa;
+  --dark-red: #c53333;
+  --grey: #757575;
+  --light-grey: #e5e5e5;
+  --light-blue: #c8d4e8;
+  --claret: #5a0101;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 450px;
+  overflow-x: hidden;
+  font-size: 62.5%;
+  color: var(--black);
+  background-color: var(--white);
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #646464;
+}

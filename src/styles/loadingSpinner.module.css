@@ -1,0 +1,25 @@
+.loadingSpinnerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingSpinner {
+  width: 50px;
+  height: 50px;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Override styles */
+.loadingSpinnerContainer.form {
+  margin: 5rem 0 3rem 0;
+}

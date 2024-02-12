@@ -1,0 +1,41 @@
+.title {
+  font-size: 3.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputSection {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.buttonSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3.5rem;
+}
+
+.text {
+  margin-top: 3.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 360px) {
+  .buttonSection > button {
+    font-size: 1.5rem;
+  }
+}
