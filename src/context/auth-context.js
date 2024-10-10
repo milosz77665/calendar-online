@@ -6,7 +6,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-  signInWithRedirect,
+  signInWithPopup,
 } from "firebase/auth";
 import { auth, googleProvider } from "@/config/firebase";
 import { useRouter } from "next/navigation";
@@ -60,7 +60,7 @@ export function AuthContextProvider({ children }) {
   }
 
   async function signInWithGoogle() {
-    await signInWithRedirect(auth, googleProvider);
+    await signInWithPopup(auth, googleProvider);
   }
 
   function grantAccess() {
